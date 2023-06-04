@@ -1,0 +1,68 @@
+.locatie-box {
+    display: flex;
+}
+
+.disp-blok {
+    display: block;
+    margin-top: 30px;
+}
+
+.disp-blok a {
+    color: rgb(0, 0, 0);
+}
+
+.filter {
+    width: 15vw;
+    height: 85vh;
+    background-color: rgb(255, 255, 255);
+    margin-left: 3vw;
+    margin-top: 45px;
+    border-radius: 15px;
+    
+    /* bs */
+    -webkit-box-shadow: 6px 8px 11px -3px rgba(0,0,0,0.33);
+    -moz-box-shadow: 6px 8px 11px -3px rgba(0,0,0,0.33);
+    box-shadow: 6px 8px 11px -3px rgba(0,0,0,0.33);
+}
+
+.updel {
+    width: auto;
+    height: auto;
+}
+
+.user-not {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+  }
+
+.box {
+    width: 65vw;
+    height: 220px;
+    background-color: white;
+    margin-top: 15px;
+    margin-left: 5vw;
+    border-radius: 25px;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.box .foto {
+    padding-left: 25px;
+    padding-top: 35px;
+}
+
+.box .box-in .titel {
+    padding-left: 15px;
+    padding-top: 30px;
+}
+
+.box .box-in .info {
+    width: 50vw;
+    padding-top: 15px;
+    padding-left: 15px;
+}
