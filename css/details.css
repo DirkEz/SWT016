@@ -1,0 +1,32 @@
+.centre {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.centre img {
+    height: 600px;
+    margin-top: 75px;
+    margin-left: 100px;
+}
+.centre .info-c {
+    margin-top: 75px;
+    margin-left: 350px;
+    width: 500px;
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.centre .info-c h1 {
+    /* padding-left: ; */
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;        
+}
+
+.centre .info-c p {
+    width: 450px;
+    height: 400px;
+    margin-left: 25px;
+}
