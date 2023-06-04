@@ -46,9 +46,11 @@ CREATE TABLE IF NOT EXISTS `submits` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
--- Dumpen data van tabel swt.submits: ~0 rows (ongeveer)
+-- Dumpen data van tabel swt.submits: ~1 rows (ongeveer)
 INSERT INTO `submits` (`id`, `titel`, `artist`, `link`, `comment`, `date`) VALUES
-	(1, 'ID', 'Rulius', 'Geen link', 'Geen comment', '2023-06-05');
+	(1, 'ID', 'Rulius', 'Geen link', 'Geen comment', '2023-06-05'),
+	(2, 'ID', 'Paulo', 'Geen link', 'Geen comment', '2023-06-05'),
+	(3, 'Back To You', 'Orange Purple, Dean', 'https://open.spotify.com/track/21ym06cwygtpeKR6PU4ZX4?si=d4ecf0edc7c24cf9', 'Geen comment', '2023-06-05');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
