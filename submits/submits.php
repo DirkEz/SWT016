@@ -1,7 +1,9 @@
 <?php
-// We need to use sessions, so you should always start sessions using the below code.
 session_start();
-// If the user is not logged in redirect to the login page...
+
+if (!isset($_SESSION['popup'])) {
+	$_SESSION['popup'] = FALSE;
+}
 if (!isset($_SESSION['loggedin'] )) {
 	if ($_SESSION['is_admin'] != 1 | $_SESSION['is_admin'] != 2) {
 		header('Location: index.php');
@@ -10,7 +12,7 @@ if (!isset($_SESSION['loggedin'] )) {
 }
 include_once('config/config.php');
 
-$stmt = $connect->query("SELECT * FROM submits");
+$stmt = $connect->query("SELECT * FROM submits WHERE view=0");
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +27,7 @@ $stmt = $connect->query("SELECT * FROM submits");
 	<body class="loggedin">
 		<nav class="navtop">
 			<div>
-            <h1><a href="index.php">Home</a></h1>
+            <h1><a href="../index.php">Home</a></h1>
                 <?php 
                 if ($_SESSION['is_admin'] == 1){
                     ?><a href="../admin.php"><i class="fa-solid fa-user"></i>Admin page</a> <?php
@@ -36,13 +38,21 @@ $stmt = $connect->query("SELECT * FROM submits");
 				<a href="../user\logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
 		</nav>
+		<?php 
+			if ($_SESSION['popup'] == TRUE ) {
+				include_once('submit-redirect.php');
+				sleep(1);
+				$_SESSION['popup'] = FALSE;
+			}
+			?>
 		<div class="content">
+			
 			<h2>Submits Page</h2>	
             <?php  while ($row = $stmt->fetch()) { ?>
             <div class="submit">
             <h2>
-                <small> Titel: <?php echo $row["titel"]; ?></small>  <br>
-                <small> Artiest: <?php echo $row["artist"]; ?></small>  <br>
+                <small> Artiest: <?php echo $row["artists"]; ?></small>  <br>
+				<p style="margin-left: -5px;">Track Name: <?php echo $row["public_title"]; ?></p>
             </h2>
             <h4><?php echo $row["date"]; ?></h4>
             <h3>
