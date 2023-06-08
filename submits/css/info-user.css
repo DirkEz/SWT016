@@ -1,0 +1,21 @@
+.info-artist{
+    margin-top: 15px;
+
+}
+
+.info-artist label {
+    font-size: larger;
+}
+
+.info-id {
+    margin-top: 15px;
+}
+
+.info-id label {
+    font-size: larger;
+}
+
+.info-id a {
+    color: #4a536e;
+    font-weight: bold;
+}
