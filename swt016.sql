@@ -38,19 +38,54 @@ INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `is_admin`) VALUE
 -- Structuur van  tabel swt.submits wordt geschreven
 CREATE TABLE IF NOT EXISTS `submits` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `titel` varchar(50) DEFAULT 'ID',
-  `artist` varchar(50) DEFAULT 'ID',
-  `link` varchar(255) DEFAULT 'Geen link',
-  `comment` text DEFAULT 'Geen comment',
+  `email` varchar(50) DEFAULT NULL,
+  `artists` varchar(50) DEFAULT NULL,
+  `public_title` varchar(50) DEFAULT 'ID',
+  `discord` varchar(255) NOT NULL DEFAULT 'No Discord',
+  `genre` varchar(50) DEFAULT NULL,
+  `bpm` varchar(50) DEFAULT NULL,
+  `instagram` varchar(255) DEFAULT 'No instagram',
+  `link` varchar(255) DEFAULT 'No Link',
+  `comment` text DEFAULT 'No comment',
   `date` date DEFAULT NULL,
+  `view` int(11) DEFAULT 0,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
--- Dumpen data van tabel swt.submits: ~1 rows (ongeveer)
-INSERT INTO `submits` (`id`, `titel`, `artist`, `link`, `comment`, `date`) VALUES
-	(1, 'ID', 'Rulius', 'Geen link', 'Geen comment', '2023-06-05'),
-	(2, 'ID', 'Paulo', 'Geen link', 'Geen comment', '2023-06-05'),
-	(3, 'Back To You', 'Orange Purple, Dean', 'https://open.spotify.com/track/21ym06cwygtpeKR6PU4ZX4?si=d4ecf0edc7c24cf9', 'Geen comment', '2023-06-05');
+-- Dumpen data van tabel swt.submits: ~2 rows (ongeveer)
+INSERT INTO `submits` (`id`, `email`, `artists`, `public_title`, `discord`, `genre`, `bpm`, `instagram`, `link`, `comment`, `date`, `view`) VALUES
+	(1, 'dirk.schaafstra@gmail.com', 'Dirk, Rulius', 'ID', 'Dirk.#4339', 'Progressive House', '128', 'Dirk.mp3', 'https://soundcloud.com/musicbydirk/prog-dirk-rulius/s-nzeeq7eaCT4?si=dabe5f1aa1dd487e96690e6183b5842f&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam cursus vehicula commodo. Proin porttitor fringilla purus, ac aliquet nunc molestie sed. Nam molestie lorem ac sem condimentum euismod. Morbi eget faucibus lorem, ut efficitur risus. Proin nisl diam, maximus sed lorem quis, iaculis pretium tortor. Praesent at vestibulum neque. Duis.', '2023-06-07', 0),
+	(2, NULL, NULL, 'ID', 'No Discord', NULL, NULL, 'No instagram', 'No Link', 'No comment', '2023-06-08', 1),
+	(3, '', '', 'ID-ID', '', '', '128', '', '', '', NULL, 0),
+	(4, '', '', 'ID-ID', '', '', '128', '', '', '', NULL, 1),
+	(5, '', '', 'Artist(s) - ID', '', '', '128', '', '', '', NULL, 1),
+	(6, 'dirk@test.com', 'Dirk, Rulius', 'ID - ID', 'Dirk.#4339', 'Progressive House', '128', 'Dirk.mp3, Rulius', 'bla bla', 'Niks te zeggen', NULL, 1);
+
+-- Structuur van  tabel swt.submit_a wordt geschreven
+CREATE TABLE IF NOT EXISTS `submit_a` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sub_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4;
+
+-- Dumpen data van tabel swt.submit_a: ~1 rows (ongeveer)
+INSERT INTO `submit_a` (`id`, `sub_id`) VALUES
+	(22, 1),
+	(23, 3),
+	(24, 5),
+	(25, 4),
+	(26, 6);
+
+-- Structuur van  tabel swt.submit_r wordt geschreven
+CREATE TABLE IF NOT EXISTS `submit_r` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sub_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=162 DEFAULT CHARSET=utf8mb4;
+
+-- Dumpen data van tabel swt.submit_r: ~20 rows (ongeveer)
+INSERT INTO `submit_r` (`id`, `sub_id`) VALUES
+	(161, 2);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
