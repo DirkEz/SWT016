@@ -48,6 +48,8 @@ if (!isset($_SESSION['loggedin'] )) {
                 ?> </div> <?php} else {
                     ?><div class="fill"></div><?php
             }?>
+
+            
             <div class="fill"></div>
                 <small> Username: <?php echo $row["username"]; ?></small>  <br>
                 <div class="main_knopje">
