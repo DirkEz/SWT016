@@ -13,7 +13,7 @@ session_start();
           <ul class="nav__wrapper">
             <ul class="nav__item"><a href="#">Home</a></ul>
             <ul class="nav__item"><a href="#">Info</a></ul>
-            <ul class="nav__item"><a href="#">Submit</a></ul>
+            <ul class="nav__item"><a href="submit.php">Submit</a></ul>
             <ul class="nav__item"><a href="#">Contact</a></ul>
             <ul class="nav__item"><button type="submit" ><a href="./login.php">
 
