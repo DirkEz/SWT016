@@ -29,7 +29,8 @@ if (isset($_GET['accept'])) {
         $if = TRUE;
         if ($if === TRUE) {
             $view=1;
-            $stmt = $connect->query("UPDATE submits SET view='$view' WHERE id = '$id'");  
+            $aod=1;
+            $stmt = $connect->query("UPDATE submits SET view='$view', aod='$aod' WHERE id = '$id'");  
             $stmt->execute();
             $stmt->fetch();
         }
@@ -46,7 +47,8 @@ if (isset($_GET['reject'])){
         $if = TRUE;
         if ($if === TRUE) {
             $view=1;
-            $stmt = $connect->query("UPDATE submits SET view='$view' WHERE id = '$id'");  
+            $aod=2;
+            $stmt = $connect->query("UPDATE submits SET view='$view', aod='$aod' WHERE id = '$id'"); 
             $stmt->execute();
             $stmt->fetch();
         }
