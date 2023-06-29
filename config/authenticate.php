@@ -21,10 +21,14 @@ if ($stmt = $con->prepare("SELECT id, password, is_admin FROM accounts WHERE use
 	$stmt->execute();
 	$stmt->store_result();
     // debug_to_console("2");
+    
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $password, $admin);
+        
+        $stmt->bind_result($id, $password_hashed, $admin);
         $stmt->fetch();
-        if ($_POST['password'] === $password) {
+        $password = password_verify($_POST['password'], $password_hashed);
+        
+        if ($password === true ) {
             session_regenerate_id();
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
@@ -40,6 +44,9 @@ if ($stmt = $con->prepare("SELECT id, password, is_admin FROM accounts WHERE use
             }
         } else {
             echo 'Incorrect username and/or password!';
+            echo $password_hashed;
+            echo $password;
+            echo $_POST['password'];
         }
     } else {
         echo 'Incorrect username and/or password!';
