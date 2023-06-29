@@ -21,7 +21,7 @@ if (!isset($_SESSION['loggedin'] )) {
 		<meta charset="utf-8">
 		<title>Users | <?=$_SESSION['name']?>!</title>
         <link rel="stylesheet" href="css/style.css">
-		<link href="css\users.css" rel="stylesheet" type="text/css">
+		<link href="css/users.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	</head>
 	<body class="loggedin">
@@ -30,7 +30,7 @@ if (!isset($_SESSION['loggedin'] )) {
             <h1><a href="../index.php">Home</a></h1>
                 <a href="../admin.php"><i class="fa-solid fa-backward"></i>Back</a>
 				<a href="../user/profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-				<a href="../user\logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+				<a href="../user/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
 		</nav>
 		<div class="content">
@@ -43,9 +43,8 @@ if (!isset($_SESSION['loggedin'] )) {
             <h2>
             
             <?php if($row['is_admin'] == 1) {
-                ?><div class="admin_check"> <?php
                 echo "Admin"; 
-                ?> </div> <?php} else {
+                } else {
                     ?><div class="fill"></div><?php
             }?>
 
