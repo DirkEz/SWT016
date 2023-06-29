@@ -28,82 +28,30 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.blok-main {
+.body-main {
     width: 100vw;
-    height: 500px;
-    background-image: url('../img/home-main.png');
+    height: 600px;
+    background-image: url('../img/IMG_6494.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 19vh;
-    padding-left: 32.5vw;
+    padding-top: 40vh;
+    padding-left: 10vw;
 }
 
-.blok-main .zoekbalk{
-    width: 680px;
-    height:82px;
-    background-color: white;
-    position: relative;
-    border: 2px solid var(--derde-kleur-);
-    border-radius: 50px;
-    font-size: 35px;
-    display: flex;
-    -webkit-box-shadow: 6px 7px 7px 0px rgba(0,0,0,0.34);
-    -moz-box-shadow: 6px 7px 7px 0px rgba(0,0,0,0.34);
-    box-shadow: 6px 7px 7px 0px rgba(0,0,0,0.34);
-}
-
-.blok-main .zoekbalk input{
-    background-color: var(--wit-kleur-);
-    width: 550px;
-    height: 78px;
-    /* position: relative; */
-    border: 0px;
-    border-radius: 50px;
-    font-size: 35px;
-    padding-left: 50px;
-}
-
-.blok-main .zoekbalk .zoek-icon {
-    width: 80px;
-    height: 78px;
-    /* background-color: aqua; */
-    border-radius: 50px;
-    padding-top: 15px;
-    padding-left: 15px;
+.body-main .sc {
     
 }
 
-.blok-Info {
-    width: 100vw;
-    height: 500px;
-    display: flex;
+.body-main .sc a{
+    padding: 20px;
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    background-color: rgb(255, 115, 0);
+    border-radius: 10px;
 }
 
-.blok-Info .info-text {
-    width: 500px;
-    padding-top: 130px;
-    margin-left: 400px;
-}
 
-.blok-Info .info-foto img {
-    width: 600px;
-    margin-top: 30px;
-    border-radius: 5px; 
-    margin-left: 40px;
-    position: relative;
-}
-
-.blok-Info .info-text .titel {
-    font-size: larger;
-    font-weight: 600;
-    margin-top: -10px;
-}
-
-.blok-Locaties {
-    background-color: white;
-    width: 100vw;
-    height: 500px;
-}
 
 
 
@@ -169,28 +117,25 @@ ul button {
   
   @media (max-width: 599px) {
     .nav__wrapper {
-        position: absolute;
-        top: 100%;
+        /* position: absolute; */
+        /* top: 100%;
         right: 0;
-        left: 0;
-        z-index: -1;
-        background-color: #d9f0f7;
-        visibility: hidden;
-        opacity: 0;
-        transform: translateY(-100%);
-        transition: transform 0.3s ease-out, opacity 0.3s ease-out; }
-      .nav__wrapper.active {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0); } }
+        left: 0; */
+        /* z-index: -1; */
+        /* background-color: #d9f0f7; */
+        /* visibility: hidden; */
+        /* opacity: 0; */
+        /* transform: translateY(-100%); */
+        /* transition: transform 0.3s ease-out, opacity 0.3s ease-out;  */}
+      /* .nav__wrapper.active { */
+        /* visibility: visible; */
+        /* opacity: 1; */
+        /* transform: translateY(0); }  */}
   
   .nav__item a {
     display: block;
     padding: 1.5rem 1rem; }
   
-  .nav__toggle {
-    display: none; 
-}
 
 
 @media (max-width: 599px) {
