@@ -70,3 +70,40 @@ body.loggedin {
 .content a {
 	color: #2f3947;
 }
+.content .flex {
+	display: flex;
+	justify-content: center;
+}
+.content .accepted{
+	text-align: center;
+	width: 30%;
+	height: 40px;
+	background-color: #6eff3e;
+	border-radius: 10px;
+}
+.content .accepted p{
+	margin-top: 5px;
+}
+
+.content .rejected{
+	text-align: center;
+	width: 30%;
+	height: 40px;
+	background-color: #ff1867;
+	border-radius: 10px;
+}
+.content .rejected p{
+	margin-top: 5px;
+}
+
+.content .no-review{
+	text-align: center;
+	width: 30%;
+	height: 40px;
+	color: white;
+	background-color: #8f8f8f;
+	border-radius: 10px;
+}
+.content .no-review p{
+	margin-top: 5px;
+}
