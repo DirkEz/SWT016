@@ -63,3 +63,11 @@ label {
 .label-bpm {
   display: flex ;
 }
+
+@media (max-width: 599px) {
+      
+}
+
+.back-button {
+
+}
