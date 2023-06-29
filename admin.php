@@ -18,7 +18,7 @@ if ($_SESSION['is_admin'] != 1) {
 		<meta charset="utf-8">
 		<title>Welcome, <?=$_SESSION['name']?>!</title>
         <link rel="stylesheet" href="css/style.css">
-		<link href="css\user.css" rel="stylesheet" type="text/css">
+		<link href="css/user.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	</head>
 	<body class="loggedin">
@@ -27,7 +27,7 @@ if ($_SESSION['is_admin'] != 1) {
             <h1><a href="index.php">Home</a></h1>
 				<a href="user.php"><i class="fa-solid fa-user"></i> User page</a>
 				<a href="user/profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-				<a href="user\logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+				<a href="user/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
 		</nav>
 		<div class="content">
@@ -36,11 +36,11 @@ if ($_SESSION['is_admin'] != 1) {
 			<p>Welcome, Admin <?=$_SESSION['name']?></p>
 			
 			<div>
-				<a href="submits\submits.php"><i class="fa-solid fa-inbox"></i> Submits</a>
+				<a href="submits/submits.php"><i class="fa-solid fa-inbox"></i> Submits</a>
 			</div>
 
 			<div class="edit">
-				<a href="admin\users.php"><i class="fa-solid fa-users-gear"></i> Edit Users</a>
+				<a href="admin/users.php"><i class="fa-solid fa-users-gear"></i> Edit Users</a>
 			</div>
 
 				
